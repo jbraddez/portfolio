@@ -207,7 +207,7 @@ section{
     transform: translateX(-50%);
 }
 
-.img-cont img{
+.img-cont img, iframe{
     width: 100%;
     height: 100%;
     object-fit: contain;
