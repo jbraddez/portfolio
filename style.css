@@ -220,16 +220,23 @@ section{
 }
 
 @media screen and (max-width: 600px){
-    * {
-        font-size: 0.8rem;
-    }
-    h1{font-size:1.2rem;}
-    h3{font-size:1rem;}
+   p,h4,h5{
+    font-size: 0.7rem;
+   }
+   h2{
+    font-size: 0.9rem;
+   }
+   a{
+    font-size: 0.7rem;
+   }
     .project-card{
         margin: 10px 0;
         position: relative;
         left: 50%;
         max-width: 90%;
         transform: translateX(-50%);
+    }
+    #flagtext{
+        font-size: 0.6rem;
     }
 }
