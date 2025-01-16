@@ -1,0 +1,394 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    color: #fefefe;
+    transition: ease-in-out 300ms;
+}
+
+:target {
+    scroll-margin-top: 80px; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #000028;
+    width: 100svw;
+    max-width: 760px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header{
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 38, 0.75);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.4px);
+    -webkit-backdrop-filter: blur(8.4px);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.linkedin-cont{
+    width: 40px;
+    height: 40px;
+}
+.hero-icon-cont svg{
+    width: 25px;
+    height: 25px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+.linkedin-cont *, .hero-icon-cont *{
+    fill: #fefefe;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.linkedin-cont:hover,.hero-icon-cont:hover{
+    scale: 1.1;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    gap: 11px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.links a:hover{
+    rotate: 3deg;
+}
+
+main{
+    position: relative;
+    top: 10px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+h4,h5,h6{
+    font-weight: 400;
+}
+
+.hero-text{
+    padding: 30px;
+    overflow: none;
+}
+
+.flag{
+    width: 35px;
+    padding: 5px;
+}
+
+#flagtext{
+    display: flex;
+    align-items: center;
+}
+
+.icons-cont{
+    margin: 10px 0;
+    display: flex;
+    gap: 25px;
+}
+
+.dropdown-title{
+    transition: none;
+    opacity: 0;
+    font-size: 0.8rem;
+    background: #acacac68;
+    border: 1px solid #acacac;
+    height: min-content;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.hero-icon-cont{
+    text-align: center;
+    margin: 0 -15px;
+}
+
+.hero-icon-cont:hover .dropdown-title{
+   opacity: 1;
+}
+
+hr{
+    border: 0.8px solid #acacac;
+    outline: none;
+}
+
+ul{
+    margin: 5px 5px 5px 20px ;
+}
+
+li{
+    font-size: 0.8rem;
+}
+
+.education-card{
+    border: 1px solid #acacaca9;
+    border-radius: 8px;
+    padding: 15px;
+    width: fit-content;
+    margin: 20px;
+}
+
+.education-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.education-title p{
+    font-size: 0.6rem;
+}
+
+.logos-cont{
+    display: flex;
+}
+
+.language-logo{
+    width: 40px;
+    margin: 5px;
+}
+
+section{
+    padding: 5px;
+    margin: 20px 0;
+}
+
+.project-card-links{
+    display: flex;
+    gap: 15px;
+    margin: 5px;
+    width: 100%;
+}
+
+.project-links{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.project-links svg{
+    fill: #fefefe;
+    width: 15px;
+}
+
+.experience{
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+
+.img-cont{
+    max-width: 400px;
+    aspect-ratio: 2/1;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.img-cont img, iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.project-card{
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact {
+    background: #1a1c34;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px auto;
+    margin-bottom: 20svh;
+    width: 95%;
+    max-width: 700px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 1.6rem;
+    color: #fefefe;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#contact hr {
+    border: 0.8px solid #acacac;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1rem;
+}
+
+form label {
+    color: #fefefe;
+    font-weight: 500;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #acacac;
+    background: #2d2f44; 
+    color: #fefefe;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #5c6bc0; 
+    background: #393d55; 
+}
+
+form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+form button {
+    padding: 12px;
+    background: #5c6bc0; 
+    border: none;
+    border-radius: 8px;
+    color: #fefefe;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #3f51b5;
+    scale: 1.01;
+}
+
+form button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(92, 107, 192, 0.7);
+}
+
+
+
+
+@media screen and (max-width: 600px){
+   p,h4,h5{
+    font-size: 0.7rem;
+   }
+   h2{
+    font-size: 0.9rem;
+   }
+   a{
+    font-size: 0.7rem;
+   }
+    .project-card{
+        max-width: 90%;
+    }
+    #flagtext{
+        font-size: 0.6rem;
+    }
+    #contact {
+        padding: 15px;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+
+    #contact h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    form input, form textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    form button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+#alert, #success {
+    display: none;
+    opacity: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 15px;
+    transition: opacity 0.3s ease;
+}
+
+#alert {
+    background-color: #d32f2f;
+    color: #fefefe;
+    border: 1px solid #b71c1c;
+}
+
+#success {
+    background-color: #388e3c; 
+    color: #fefefe;
+    border: 1px solid #2e7d32;
+}
+
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#otherprojectslink:hover{
+    text-decoration: underline;
+}
+
+.slide-fade-in {
+    opacity: 0;
+    animation: slideFadeIn 1s forwards; /* Runs once when triggered */
+}
+
+@media screen and (max-width: 600px) { 
+    section.visible{
+        opacity: 1;
+    }
+}
