@@ -36,30 +36,42 @@ header{
     -webkit-backdrop-filter: blur(8.4px);
     height: 80px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.linkedin-cont{
-    width: 40px;
-    height: 40px;
+footer{
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -5px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 20px 0;
+    width: 100%;
 }
-.hero-icon-cont svg{
+
+.icons-cont{
+    display: flex;
+    margin-top: 5px;
+    gap: 5px;
+    height: 25px;
+}
+
+.hero-icon-cont svg, .hero-icon-cont img{
     width: 25px;
     height: 25px;
     aspect-ratio: 1/1;
     overflow: hidden;
 }
-.linkedin-cont *, .hero-icon-cont *{
+.hero-icon-cont svg{
     fill: #fefefe;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
-.linkedin-cont:hover,.hero-icon-cont:hover{
+.hero-icon-cont:hover{
     scale: 1.1;
 }
 
@@ -104,11 +116,6 @@ h4,h5,h6{
     align-items: center;
 }
 
-.icons-cont{
-    margin: 10px 0;
-    display: flex;
-    gap: 25px;
-}
 
 .dropdown-title{
     transition: none;
@@ -121,10 +128,6 @@ h4,h5,h6{
     border-radius: 5px;
 }
 
-.hero-icon-cont{
-    text-align: center;
-    margin: 0 -15px;
-}
 
 .hero-icon-cont:hover .dropdown-title{
    opacity: 1;
@@ -151,6 +154,14 @@ li{
     margin: 20px;
 }
 
+#edu-cards-cont{
+    width: fit-content;
+}
+
+.education .education-card:nth-child(2){
+    width: calc(100% - 40px);
+}
+
 .education-title{
     width: 100%;
     display: flex;
@@ -161,13 +172,31 @@ li{
     font-size: 0.6rem;
 }
 
-.logos-cont{
+.skill-list {
+    margin-top: 10px;
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.language-logo{
+.skill-list li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skill-list li svg, .skill-list li img{
+    height: 40px;
     width: 40px;
-    margin: 5px;
+    aspect-ratio: 1/1;
+    margin-bottom: 5px;
+}
+
+.skill-list li svg:hover, .skill-list li img:hover{
+    scale: 1.1;
+    filter: drop-shadow(rgba(255, 255, 255, 0.35) 0px 0px 15px);
+    cursor: pointer;
+    rotate: 4deg;
 }
 
 section{
@@ -226,7 +255,7 @@ section{
     border-radius: 10px;
     padding: 20px;
     margin: 40px auto;
-    margin-bottom: 20svh;
+    margin-bottom: 10svh;
     width: 95%;
     max-width: 700px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
@@ -303,6 +332,9 @@ form button:focus {
 
 
 @media screen and (max-width: 600px){
+   header .links{
+    width: 80svw;
+   }
    p,h4,h5{
     font-size: 0.7rem;
    }
@@ -317,6 +349,8 @@ form button:focus {
     }
     #flagtext{
         font-size: 0.6rem;
+        position: relative;
+        top: -0.8lh;
     }
     #contact {
         padding: 15px;
@@ -384,7 +418,7 @@ form button:focus {
 
 .slide-fade-in {
     opacity: 0;
-    animation: slideFadeIn 1s forwards; /* Runs once when triggered */
+    animation: slideFadeIn 1s forwards;
 }
 
 @media screen and (max-width: 600px) { 
@@ -392,3 +426,4 @@ form button:focus {
         opacity: 1;
     }
 }
+
