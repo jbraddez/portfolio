@@ -200,6 +200,22 @@ li{
     rotate: 4deg;
 }
 
+.tech-stack{
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+.tech-stack li{
+    width: 60px;
+}
+
+.tech-stack li p:last-child{
+    white-space: nowrap;
+    font-size: 0.7rem;
+}
+
+
+
 section{
     padding: 5px;
     margin: 20px 0;
@@ -381,6 +397,18 @@ form button:focus {
     form button {
         padding: 10px;
         font-size: 1rem;
+    }
+
+
+    .tech-stack{
+        justify-content: space-evenly;
+    }
+    .tech-stack li svg, .tech-stack li img{
+        width: 20px;
+        height: 20px;
+    }
+    .tech-stack li p{
+        font-size: 0.6rem !important;
     }
 }
 
